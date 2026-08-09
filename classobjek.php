@@ -1,20 +1,39 @@
 <?php 
-class Siswa {
+class minuman {
     public $nama;
-    public $jurusan;
+    public $harga;
+    public $rasa;
+    public $ukuran;
+    public $jenis;
+    
  
-    public function __construct($nama,$jurusan) {
+    public function __construct($nama,$harga,$rasa,$ukuran,$jenis) {
         $this->nama=$nama;
-        $this->jurusan=$jurusan;
+        $this->harga=$harga;
+        $this->rasa=$rasa;
+        $this->ukuran=$ukuran;
+        $this->jenis=$jenis;
+
         
     }
-    public function perkenalan() {
-        echo "Halo,nama saya $this->nama dari jurusan $this->jurusan.<br>";
+    public function info() {
+        echo "nama: $this->nama<br>";
+        echo "harga: Rp$this->harga<br>";
+        echo "rasa: $this->rasa<br>";
+        echo "ukuran:  $this->ukuran<br>";
+        echo "jenis: $this->jenis<br>";
 
     }
 }
 
-$siswa1=new siswa("saskia","informatika");
-$siswa1->perkenalan();
+$minuman1 = new Minuman(
+    "boba",
+    "15000",
+    "taro",
+    "medium",
+    "minuman dingin"
+);
+   
+   $minuman1->info();
 
 ?>
